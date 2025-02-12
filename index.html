@@ -109,9 +109,10 @@
         <img src="Winkel.jpg" alt="Beispielprodukt" width="300">
     </div>
 
-    <div class="testimonials">
-        <h2>Das sagen unsere Kunden:</h2>
-        <div class="testimonial">
+   <div class="testimonials">
+    <h2>Das sagen unsere Kunden:</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial active">
             <p>"Tun ihren Dienst" – <span class="author">Sven K.</span></p>
         </div>
         <div class="testimonial">
@@ -121,6 +122,38 @@
             <p>"Immerhin günstig" – <span class="author">Christian B.</span></p>
         </div>
     </div>
+</div>
+
+<style>
+    .testimonial-slider {
+        position: relative;
+        max-width: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 60px; /* Höhe der Box für Konsistenz */
+    }
+    .testimonial {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    .testimonial.active {
+        opacity: 1;
+    }
+</style>
+
+<script>
+    let index = 0;
+    function showNextTestimonial() {
+        let testimonials = document.querySelectorAll(".testimonial");
+        testimonials[index].classList.remove("active");
+        index = (index + 1) % testimonials.length;
+        testimonials[index].classList.add("active");
+    }
+    setInterval(showNextTestimonial, 5000);
+</script>
+
 
     <div class="contact">
         <p>📧 Kontakt: <a href="mailto:info@winkelhelden.de">info@winkelhelden.de</a></p>
