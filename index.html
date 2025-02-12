@@ -7,23 +7,28 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Helles Grau */
-            color: #333; /* Dunkles Grau für Text */
+            background-color: #f4f4f4;
+            color: #333;
             text-align: center;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #333; /* Dunkelgrau */
+            background-color: #333;
             color: white;
             padding: 20px;
         }
         header img {
             max-width: 150px;
+            cursor: pointer;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
         }
         .content {
             padding: 20px;
-            background-color: white; /* Weißer Hintergrund für den Inhalt */
+            background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .content h2 {
@@ -31,7 +36,7 @@
             margin-top: 10px;
         }
         .contact {
-            background-color: #444; /* Dunkelgrau */
+            background-color: #444;
             color: white;
             padding: 20px;
             margin-top: 20px;
@@ -45,16 +50,16 @@
             padding: 20px;
             font-size: 0.9em;
             text-align: left;
-            background-color: #f4f4f4; /* Helles Grau */
+            background-color: #f4f4f4;
         }
         .testimonials {
             margin-top: 40px;
             font-style: italic;
-            background-color: #e6e6e6; /* Helles Grau */
+            background-color: #e6e6e6;
             padding: 20px;
             position: relative;
             overflow: hidden;
-            height: 200px; /* Höhe der Slideshow */
+            height: 200px;
         }
         .testimonial {
             display: none;
@@ -65,12 +70,11 @@
         }
         .testimonial .author {
             font-weight: bold;
-            color: #555; /* Dunkleres Grau für den Autor */
+            color: #555;
         }
         .testimonials .testimonial.active {
             display: block;
         }
-        /* Slideshow-Steuerung */
         .testimonial-navigation {
             position: absolute;
             top: 50%;
@@ -84,20 +88,24 @@
         .testimonial-navigation span {
             cursor: pointer;
         }
-        /* Anpassungen für Aufzählungspunkte */
         ul {
             list-style-type: disc;
             padding-left: 20px;
             text-align: left;
         }
         li {
-            margin: 10px 0; /* Reduziert den Abstand zwischen den Punkten */
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="Logo.png" alt="Winkelhelden Logo">
+        <a href="index.html"><img src="Logo.png" alt="Winkelhelden Logo"></a>
+        <nav>
+            <a href="ueber-uns.html">Über uns</a> | 
+            <a href="produkte.html">Produkte</a> | 
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
     </header>
     <div class="content">
         <h1>Willkommen bei den Winkelhelden</h1>
@@ -131,7 +139,6 @@
         <img src="Winkel.jpg" alt="Beispielprodukt" width="300">
     </div>
 
-    <!-- Testimonials Slideshow -->
     <div class="testimonials">
         <h2>Das sagen unsere Kunden:</h2>
         <div class="testimonial active">
@@ -143,8 +150,6 @@
         <div class="testimonial">
             <p>"Immerhin günstig" – <span class="author">Christian B.</span></p>
         </div>
-
-        <!-- Slideshow navigation -->
         <div class="testimonial-navigation">
             <span class="prev" onclick="changeTestimonial(-1)">&#10094;</span>
             <span class="next" onclick="changeTestimonial(1)">&#10095;</span>
