@@ -52,9 +52,13 @@
             font-style: italic;
             background-color: #e6e6e6; /* Helles Grau */
             padding: 20px;
+            position: relative;
+            overflow: hidden;
+            height: 200px; /* Höhe der Slideshow */
         }
         .testimonial {
-            margin-bottom: 20px;
+            display: none;
+            padding: 10px;
         }
         .testimonial p {
             font-size: 1.1em;
@@ -62,6 +66,23 @@
         .testimonial .author {
             font-weight: bold;
             color: #555; /* Dunkleres Grau für den Autor */
+        }
+        .testimonials .testimonial.active {
+            display: block;
+        }
+        /* Slideshow-Steuerung */
+        .testimonial-navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 2em;
+            color: #333;
+            transform: translateY(-50%);
+        }
+        .testimonial-navigation span {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -101,9 +122,10 @@
         <img src="Winkel.jpg" alt="Beispielprodukt" width="300">
     </div>
 
+    <!-- Testimonials Slideshow -->
     <div class="testimonials">
         <h2>Das sagen unsere Kunden:</h2>
-        <div class="testimonial">
+        <div class="testimonial active">
             <p>"Tun Ihren Dienst" – <span class="author">Sven K.</span></p>
         </div>
         <div class="testimonial">
@@ -111,6 +133,12 @@
         </div>
         <div class="testimonial">
             <p>"Immerhin günstig" – <span class="author">Christian B.</span></p>
+        </div>
+
+        <!-- Slideshow navigation -->
+        <div class="testimonial-navigation">
+            <span class="prev" onclick="changeTestimonial(-1)">&#10094;</span>
+            <span class="next" onclick="changeTestimonial(1)">&#10095;</span>
         </div>
     </div>
 
@@ -126,5 +154,16 @@
            Deutschland</p>
         <p>E-Mail: <a href="mailto:info@winkelhelden.de">info@winkelhelden.de</a></p>
     </div>
+
+    <script>
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        
+        function changeTestimonial(direction) {
+            testimonials[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial + direction + testimonials.length) % testimonials.length;
+            testimonials[currentTestimonial].classList.add('active');
+        }
+    </script>
 </body>
 </html>
