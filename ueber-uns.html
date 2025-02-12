@@ -3,66 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über uns – Winkelhelden</title>
+    <title>Über uns - Winkelhelden</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Helles Grau */
-            color: #333; /* Dunkles Grau für Text */
+            background-color: #f4f4f4;
+            color: #333;
             text-align: center;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #333; /* Dunkelgrau */
+            background-color: #333;
             color: white;
             padding: 20px;
         }
         header img {
             max-width: 150px;
+            cursor: pointer;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
         }
         .content {
             padding: 20px;
-            background-color: white; /* Weißer Hintergrund für den Inhalt */
+            background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 20px auto;
-            text-align: left;
         }
-        .content h1 {
-            text-align: center;
+        .content h2 {
+            font-size: 1.5em;
+            margin-top: 10px;
         }
-        .back-link {
-            display: block;
+        .contact {
+            background-color: #444;
+            color: white;
+            padding: 20px;
             margin-top: 20px;
-            text-align: center;
         }
-        .back-link a {
+        .contact a {
+            color: white;
             text-decoration: none;
-            color: #333;
             font-weight: bold;
+        }
+        .impressum {
+            padding: 20px;
+            font-size: 0.9em;
+            text-align: left;
+            background-color: #f4f4f4;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="Logo.png" alt="Winkelhelden Logo">
+        <a href="index.html"><img src="Logo.png" alt="Winkelhelden Logo"></a>
+        <nav>
+            <a href="index.html">Startseite</a> |
+            <a href="produkte.html">Produkte</a> |
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
     </header>
-
     <div class="content">
         <h1>Über uns</h1>
-        <p>Unsere Winkel sind mehr als nur einfache Kunststoffteile – sie stehen für Qualität, Präzision und Nachhaltigkeit. Wir fertigen maßgeschneiderte Winkel aus PLA oder PETG, um Schränke stabiler zu machen und gleichzeitig Ressourcen zu schonen.</p>
+        <p>Wir bei Winkelhelden bieten maßgefertigte Winkel für jedes Projekt – schnell, präzise und nachhaltig.</p>
+        <p>Unsere Philosophie basiert auf Qualität, individuellen Lösungen und einem hohen Maß an Nachhaltigkeit. Wir fertigen unsere Produkte aus umweltfreundlichen Materialien, um einen positiven Beitrag zu leisten.</p>
+        <p>Jeder Winkel wird nach deinen persönlichen Maßen und Anforderungen angefertigt, um eine passgenaue Lösung für dein Projekt zu gewährleisten.</p>
+    </div>
 
-        <h2>Nachhaltigkeit im Fokus</h2>
-        <p>Warum PLA oder PETG? Beide Materialien sind langlebig und umweltfreundlicher als herkömmliche Alternativen. PLA wird aus nachwachsenden Rohstoffen wie Maisstärke gewonnen und ist biologisch abbaubar. PETG ist besonders robust und recyclebar – perfekt für langlebige Lösungen ohne unnötigen Abfall.</p>
-        <p>Durch bedarfsgerechte Produktion stellen wir nur so viele Winkel her, wie wirklich gebraucht werden. Keine Massenproduktion, keine Überproduktion – das schont Ressourcen und vermeidet Müll.</p>
-        <p>Unsere Verpackung? So minimalistisch wie unser Design. Kein unnötiges Plastik, kein überflüssiges Material.</p>
-
-        <h2>Besseres Miteinander – ein Winkel für alle Fälle</h2>
-        <p>Ein stabiler Schrank kann mehr sein als nur ein Möbelstück – er kann für Ordnung, Verlässlichkeit und ein harmonisches Zuhause stehen. Unsere Winkel helfen dabei, Möbel langlebiger zu machen, Reparaturen zu erleichtern und Dinge in Ordnung zu halten. Egal, ob in der WG, der Familie oder im Büro: Ein sicher stehender Schrank sorgt für weniger Ärger und mehr Miteinander.</p>
-        <p>Wir glauben daran, dass kleine Dinge einen großen Unterschied machen können. Mit unseren maßgefertigten Winkeln unterstützen wir nachhaltiges Handeln, DIY-Projekte und die Freude am Reparieren statt Wegwerfen.</p>
-
-        <p class="back-link"><a href="index.html">Zurück zur Startseite</a></p>
+    <div class="contact">
+        <p>Kontakt: <a href="mailto:info@winkelhelden.de">info@winkelhelden.de</a></p>
+    </div>
+    <div class="impressum">
+        <h2>Impressum</h2>
+        <p><strong>Winkelhelden</strong><br>
+           SD3D<br>
+           Am Achterplätzchen 3<br>
+           90513 Zirndorf<br>
+           Deutschland</p>
+        <p>E-Mail: <a href="mailto:info@winkelhelden.de">info@winkelhelden.de</a></p>
     </div>
 </body>
 </html>
