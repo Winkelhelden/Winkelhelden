@@ -18,29 +18,31 @@
             color: white;
             padding: 20px;
         }
+        header a {
+            text-decoration: none;
+            color: white;
+        }
         header img {
             max-width: 150px;
             cursor: pointer;
         }
-        header a {
-            text-decoration: none;
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 15px;
             color: white;
+            text-decoration: none;
+            font-weight: bold;
         }
         .content {
             padding: 20px;
             background-color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .contact {
-            background-color: #444;
-            color: white;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .contact a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+        .content h2 {
+            font-size: 1.5em;
+            margin-top: 10px;
         }
         .impressum {
             padding: 20px;
@@ -55,30 +57,52 @@
             font-style: italic;
             background-color: #e6e6e6;
             padding: 20px;
+            overflow: hidden;
+            position: relative;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
+
+        .testimonials-container {
+            display: flex;
+            width: 300%;
+            animation: scrollTestimonial 15s linear infinite;
+        }
+
         .testimonial {
-            display: none;
-            font-size: 1.2em;
+            flex: 0 0 33.33%;
+            padding: 10px;
         }
-        .testimonial.active {
-            display: block;
+
+        .testimonial p {
+            font-size: 1.1em;
         }
+
         .testimonial .author {
             font-weight: bold;
             color: #555;
+        }
+
+        @keyframes scrollTestimonial {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-33.33%); }
+            66% { transform: translateX(-66.66%); }
+            100% { transform: translateX(0); }
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="Logo.png" alt="Winkelhelden Logo"></a>
+        <a href="index.html">
+            <img src="Logo.png" alt="Winkelhelden Logo">
+        </a>
         <nav>
-            <a href="index.html">Startseite</a> |
-            <a href="ueber-uns.html">Über uns</a> |
-            <a href="produkte.html">Produkte</a> |
-            <a href="kontakt.html">Kontakt</a>
+            <a href="produkte.html">Produkte</a>
+            <a href="ueber-uns.html">Über uns</a>
         </nav>
     </header>
+
     <div class="content">
         <h1>Willkommen bei den Winkelhelden</h1>
         <p>Ein Winkel nach Maß vom Experten.</p>
@@ -90,23 +114,21 @@
         <img src="Winkel.jpg" alt="Beispielprodukt" width="300">
     </div>
 
-    <!-- Kundenstimmen -->
     <div class="testimonials">
         <h2>Das sagen unsere Kunden:</h2>
-        <div class="testimonial active">
-            <p>"Tun ihren Dienst" – <span class="author">Sven K.</span></p>
-        </div>
-        <div class="testimonial">
-            <p>"Besser als nichts" – <span class="author">Lukas F.</span></p>
-        </div>
-        <div class="testimonial">
-            <p>"Immerhin günstig" – <span class="author">Christian B.</span></p>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <p>"Tun Ihren Dienst" – <span class="author">Sven K.</span></p>
+            </div>
+            <div class="testimonial">
+                <p>"Besser als nichts" – <span class="author">Lukas F.</span></p>
+            </div>
+            <div class="testimonial">
+                <p>"Immerhin günstig" – <span class="author">Christian B.</span></p>
+            </div>
         </div>
     </div>
 
-    <div class="contact">
-        <p>Kontakt: <a href="mailto:info@winkelhelden.de">info@winkelhelden.de</a></p>
-    </div>
     <div class="impressum">
         <h2>Impressum</h2>
         <p><strong>Winkelhelden</strong><br>
@@ -116,18 +138,5 @@
            Deutschland</p>
         <p>E-Mail: <a href="mailto:info@winkelhelden.de">info@winkelhelden.de</a></p>
     </div>
-
-    <script>
-        let currentIndex = 0;
-        const testimonials = document.querySelectorAll(".testimonial");
-
-        function showNextTestimonial() {
-            testimonials[currentIndex].classList.remove("active");
-            currentIndex = (currentIndex + 1) % testimonials.length;
-            testimonials[currentIndex].classList.add("active");
-        }
-
-        setInterval(showNextTestimonial, 5000);
-    </script>
 </body>
 </html>
