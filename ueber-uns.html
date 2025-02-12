@@ -7,14 +7,15 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: white;
-            color: black;
+            background-color: #f4f4f4; /* Helles Grau */
+            color: #333; /* Dunkles Grau für Text */
             text-align: center;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: black;
+            background-color: #333; /* Dunkelgrau */
+            color: white;
             padding: 20px;
         }
         header img {
@@ -22,36 +23,40 @@
         }
         .content {
             padding: 20px;
+            background-color: white; /* Weißer Hintergrund für den Inhalt */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             text-align: left;
         }
-        .contact {
-            background-color: red;
-            color: white;
-            padding: 20px;
-            margin-top: 20px;
+        .content h1 {
+            text-align: center;
         }
-        .contact a {
-            color: white;
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-link a {
             text-decoration: none;
+            color: #333;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="Logo Winkelhelden.png" alt="Winkelhelden Logo">
+        <img src="Logo.png" alt="Winkelhelden Logo">
     </header>
+
     <div class="content">
-        <h1>Über uns – Nachhaltigkeit in jedem Winkel</h1>
-        <p>Bei <strong>Winkelhelden</strong> fertigen wir maßgeschneiderte Winkel für Schränke – und das mit einem Blick auf die Umwelt. Statt Massenproduktion setzen wir auf 3D-Druck nach Bedarf. Das bedeutet: weniger Abfall, keine unnötige Lagerhaltung und ein effizienter Ressourceneinsatz.</p>
-        <p>Unsere Winkel bestehen aus <strong>PLA oder PETG</strong>, zwei Kunststoffen, die umweltfreundlicher als herkömmliche Alternativen sind. PLA wird aus nachwachsenden Rohstoffen wie Maisstärke gewonnen, und PETG ist langlebig sowie recycelbar. So sorgen wir dafür, dass deine Schränke stabil stehen – ohne unnötige Umweltbelastung.</p>
-        <p><strong>Präzise, nachhaltig, individuell</strong> – für Möbel, die länger halten und Lösungen, die genau passen.</p>
-    </div>
-    <div class="contact">
-        <p>Kontakt: <a href="mailto:info@winkelhelden.de">info@winkelhelden.de</a></p>
-        <p><a href="index.html" style="color: white;">Zurück zur Startseite</a></p>
+        <h1>Über uns</h1>
+        <p>Unsere Winkel sind mehr als nur einfache Kunststoffteile – sie stehen für Qualität, Präzision und Nachhaltigkeit. Wir fertigen maßgeschneiderte Winkel aus PLA oder PETG, um Schränke stabiler zu machen und gleichzeitig Ressourcen zu schonen.</p>
+        <p>Warum PLA oder PETG? Beide Materialien sind langlebig und umweltfreundlicher als herkömmliche Alternativen. PLA wird aus nachwachsenden Rohstoffen gewonnen, während PETG besonders robust und wiederverwertbar ist. So kannst du mit unseren Winkeln nicht nur deine Möbel optimieren, sondern auch einen kleinen Beitrag zur Umwelt leisten.</p>
+        <p>Unsere Produktion erfolgt präzise und bedarfsgerecht, sodass unnötiger Materialabfall vermieden wird. Jeder Winkel wird individuell angefertigt, genau so, wie du ihn brauchst – ganz ohne Massenware.</p>
+        <p>Ob du alte Schränke reparierst oder neue Möbel stabilisierst – mit unseren Winkeln bist du auf der sicheren Seite.</p>
+        
+        <p class="back-link"><a href="index.html">Zurück zur Startseite</a></p>
     </div>
 </body>
 </html>
